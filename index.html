@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS ARRAY</title>
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <h3 style="text-align: center">~:JS ARRAY:~</h3>
+      </div>
+
+      <p>
+        <strong>1.</strong> Create a javscript array to store the information of
+        products given in the attachment and display them on a HTML page.
+      </p>
+
+      <table id="mytable">
+        <tbody>
+          <tr>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Memory(GB)</th>
+            <th>Price(Rs)</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>2.</strong> Take the details of a new product from the user as
+        shown in the attachment and add it to the array after the second
+        product. Use proper validations if
+      </p>
+
+      <div id="product-inp">
+        <div>
+          <span>Company</span>
+          <span><input type="text" id="company" /></span>
+        </div>
+        <div>
+          <span>Model</span>
+          <span><input type="text" id="model" /></span>
+        </div>
+        <div>
+          <span>Memory</span>
+          <span><input type="text" id="memory" /></span>
+        </div>
+        <div>
+          <span>Price</span>
+          <span><input type="text" id="price" /></span>
+        </div>
+        <div>
+          <span>
+            <button id="prod-btn">Add</button>
+          </span>
+        </div>
+      </div>
+
+      <table id="mytable2">
+        <tbody>
+          <tr>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Memory(GB)</th>
+            <th>Price(Rs)</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>3.</strong> Select product(s) from the list and their quantity
+        and add them to a array then generate a billing invoice according to the
+        attachment.
+      </p>
+
+      <div>
+        <select id="select-prod" onchange="selectFunc()">
+          <option value="0">--select product--</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Nokia">Nokia</option>
+          <option value="Xiaomi">Xiaomi</option>
+          <option value="Motorola">Motorola</option>
+          <option value="Apple">Apple</option>
+        </select>
+
+        <input type="number" placeholder="quantity" id="qty" />
+        <button id="add-sel-prod" onclick="addToCart()">add</button>
+        <button id="bill" onclick="generateBill()">generate bill</button>
+      </div>
+
+      <table id="mytable3">
+        <h3>Bill:~</h3>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="show"></tbody>
+      </table>
+
+      <p>
+        <strong
+          >4. Add a checkbox with every product. User can select one or more
+          products to delete from the list and display the remaining products
+          after deletion.</strong
+        >
+      </p>
+
+      <table id="mytable4">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Memory(GB)</th>
+            <th>Price(Rs)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="show2">
+          
+        </tbody>
+      </table>
+
+      <button style="float: right" onclick="DeleteFun()">Delete</button>
+
+
+      <!-- .................... -->
+      <p> <strong>5.</strong> Add one more column for quantity available for each of the product. It will be updated when a product is added to cart.</p>
+
+      <table id="mytable5">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Memory(GB)</th>
+            <th>Price(Rs)</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="show3">
+          
+        </tbody>
+      </table>
+      <!-- <==================> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
